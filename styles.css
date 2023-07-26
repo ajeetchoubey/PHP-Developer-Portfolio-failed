@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fefefe;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: rgba(0, 0, 0, 0.8)
+}
+
+/* HEADER START */
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    position: relative;
+    background-color: #24252A;
+}
+.logo{
+    cursor: pointer;
+    /* text-transform: uppercase; */
+    color: #fff;
+}
+.nav_links{
+    list-style: none;
+}
+.nav_links li a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.nav_links li{
+    display: inline-block;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color:#1fb8d6 ;
+}
+
+.toggle_btn{
+    background-color: #24252A;
+    display: none;
+}
+.toggle_btn img:hover, img:active{
+    opacity: 0.8;
+
+}
+.toggle_btn.active img{
+    opacity: 0.8;
+    background: url(images/close-white.png);
+    width: 30px;
+}
+.toggle_btn img{
+    width: 30px;
+    cursor: pointer;
+    transition:all 0.3s ease 0s;
+}
+nav .nav_links{
+    display: flex;
+    gap: 2rem;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu{
+    background-color: #24252A;
+    position: absolute;
+    width: 100%;
+    /* height: 300px; */
+    top: 80px;
+    left: 50%;
+    font-size: 18px;
+    transform: translateX(-50%);
+    transition: 0.5s ease;
+    display: none;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+.dropdown-menu.active{
+    height: 250px;
+}
+.dropdown-menu li{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown-menu.active li{
+    opacity: 1;
+}
+.dropdown-menu li a{
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+}
+.dropdown-menu li a:hover{
+    color: #1fb8d6;
+}
+
+/* HEADER END */
+
+/* FIRST SECTION START */
+#Home{
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+.text{
+    margin-top: 150px;
+    opacity: 1;
+    line-height: 1.5;
+}
+.text h4{
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: 400;
+}
+.intro{
+    font-size: 40px;
+    margin-top: -5px;
+}
+.text p{
+    font-size: 20px;
+}
+.btn{
+    margin-top: 30px;
+}
+.btn a{
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 1);
+    padding: 10px 20px;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+.btn a:hover{
+    background-color: #1fb8d6;
+    border-color: #1fb8d6;
+}
+.socials{
+    margin-top: 180px;
+    display: flex;
+    gap: 50px;
+}
+.fa-brands{
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+.fa-brands:hover{
+    cursor: pointer;
+    color: #1fb8d6;
+}
+
+/* FIRST SECTION END */
+
+#About{
+    height: 100vh;
+    background-color: #24252A;
+}
+#Projects{
+    height: 100vh;
+}
+#Contact{
+    height: 100vh;
+    background-color: #24252A;
+}
+
+@media(max-width:992px){
+    nav .nav_links{
+        display: none;
+    }
+    .dropdown-menu{
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    .dropdown-menu li{
+        opacity: 0;
+        transition: 0.5s;
+        transition-delay: 0.1s;
+        -webkit-transition:0.5;
+        -moz-transition: 0.5;
+        -ms-transition: 0.5;
+        -o-transition: 0.5;
+}
+    .toggle_btn{
+        display: block;
+    }
+}
