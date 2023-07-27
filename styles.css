@@ -201,7 +201,7 @@ nav .nav_links{
     background-color: #24252A;
 }
 
-@media(max-width:992px){
+@media(max-width:600px){
     nav .nav_links{
         display: none;
     }
@@ -221,5 +221,8 @@ nav .nav_links{
 }
     .toggle_btn{
         display: block;
+    }
+    .intro h1{
+        font-size: 2.8rem;
     }
 }
